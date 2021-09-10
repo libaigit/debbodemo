@@ -6,6 +6,6 @@ import com.ithiema.service.HelloService;
 public class HelloServiceImpl implements HelloService {
     @Override
     public String SayHello(String name) {
-        return "hello"+name;
+        return "hello"+name ;
     }
 }
