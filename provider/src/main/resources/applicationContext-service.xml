@@ -14,7 +14,18 @@
          http://www.springframework.org/schema/context
          http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
 <dubbo:application name="provider"></dubbo:application>
-<dubbo:registry address="zookeeper://192.168.0.1:2181"></dubbo:registry>
+<dubbo:registry address="zookeeper://localhost:2181"></dubbo:registry>
 <dubbo:protocol name="dubbo" port="20880"></dubbo:protocol>
-<dubbo:annotation package="com.ithiema.service.impl"></dubbo:annotation>
+<dubbo:annotation package="com.itheima.service.impl"></dubbo:annotation>
+
+<!--<bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource" destroy-method="close">
+<property name="username" value="root" />
+<property name="password" value="libai123" />
+<property name="driverClassName" value="com.mysql.cj.jdbc.Driver" />
+<property name="url" value="jdbc:mysql://localhost:3306/test" />
+</bean>
+<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+<property name="dataSource" ref="dataSource"/>
+</bean>
+<tx:annotation-driven transaction-manager="transactionManager" proxy-target-class="true"/>-->
 </beans>
